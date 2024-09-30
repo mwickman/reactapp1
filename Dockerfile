@@ -12,6 +12,7 @@ RUN npm install
 
 # add app to container and attempt build
 COPY . ./
-RUN npm run build || true
+RUN npm build || true
 
+# the start command needs to be triple curly braces to avoid escaping special characters
 CMD ["npm", "start"]
