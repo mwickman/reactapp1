@@ -11,11 +11,11 @@ RUN corepack enable pnpm
 # install app dependencies
 COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
 
-RUN npm install
+RUN yarn install
 
 # add app to container and attempt build
 COPY . ./
-RUN npm run build
+RUN yarn build
 
 # the start command needs to be triple curly braces to avoid escaping special characters
-CMD ["npm", "start"]
+CMD ["yarn", "start"]
