@@ -24,10 +24,10 @@ spec:
           resources:
             limits:
               cpu: 1000m
-              memory: 2147483648
+              memory: 1073741824
             requests:
-              cpu: 50m
-              memory: 50Mi
+              cpu: 1000m
+              memory: 1073741824
           ports:
             - containerPort: 3000
           startupProbe:
